@@ -12,7 +12,7 @@
 		display: none;
 	}
 	.mobileMenu{
-		display: none;
+		display: none!important;
 	}
 	
 }
