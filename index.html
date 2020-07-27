@@ -22,7 +22,16 @@
 							<li><a href="#">React JS</a></li>
 							<li><a href="#">Bootstrap</a></li>
 							<li><a href="#">Laravel</a></li>
-							<li><a href="#">Wordpress</a></li>
+							<li><a href="#">< Wordpress</a>
+
+<!-- 		dropdown link cant click if we'want to click this lick then we must use js or reduce the padding  -->
+								<ul>
+									<li><a href="#">Theme Development</a></li>
+									<li><a href="#">Theme Customization</a></li>
+								</ul>
+
+
+							</li>
 						</ul>	
 					</li>
 					<li class=''><a href="#"> Contact</a>
@@ -32,7 +41,17 @@
 							<li><a href="#">React JS</a></li>
 							<li><a href="#">Bootstrap</a></li>
 							<li><a href="#">Laravel</a></li>
-							<li><a href="#">Wordpress</a></li>
+							<li><a href="#">< Wordpress</a>
+
+<!-- 	dropdown link cant click if we'want to click this lick then we must use js or reduce the padding  -->
+								<ul>
+									<li><a href="#">Theme Development</a></li>
+									<li><a href="#">Theme Customization</a></li>
+								</ul>
+
+
+
+							</li>
 						</ul>	
 					</li>
 					<li><a href="#">Blog</a></li>
@@ -43,7 +62,13 @@
 							<li><a href="#">React JS</a></li>
 							<li><a href="#">Bootstrap</a></li>
 							<li><a href="#">Laravel</a></li>
-							<li><a href="#">Wordpress</a></li>
+							<li><a href="#">< Wordpress</a> 
+<!-- 								dropdown link cant click if we'want to click this lick then we must use js or reduce the padding  -->
+								<ul>
+									<li><a href="#">Theme Development</a></li>
+									<li><a href="#">Theme Customization</a></li>
+								</ul>
+							</li>
 						</ul>			
 					</li>
 				</ul>
@@ -74,6 +99,15 @@
 			</div>
 		</div>
 	</header>
-	<script src='app.js'></script>
+	<script>
+		let burger = document.querySelector('.burger');
+		let mobileMenu = document.querySelector('.mobileMenu');
+		burger.addEventListener('click',()=>{
+		burger.classList.toggle('active')
+		mobileMenu.classList.toggle('active');
+});
+
+
+	</script>
 </body>
 </html>

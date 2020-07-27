@@ -226,6 +226,8 @@ header{
 .menuItem>ul>li{
 	position: relative;
 	padding: 5px;
+	display: flex;
+	justify-content: center;
 }
 
 
@@ -251,7 +253,7 @@ header{
 	align-items: center;
 	padding: .6rem 1rem;
 	margin-top:.2rem;
-	overflow: hidden;
+	/*! overflow: hidden; */
 	transition: .3s all ease-in;
 	transform-origin: top;
 	transform: scaleY(0);
@@ -268,29 +270,60 @@ header{
 	transform: scaleY(1)
 }
 
-.menuItem>ul>li>ul>li:hover > a{
+.menuItem>ul>li>ul li:hover>a{
 	background: var(--primary);
 	color: var(--secound)
 }
 
+.menuItem > ul > li > ul{
+	display: block;
+}
 
-
-
-
-
-
-.menuItem > ul > li > ul > li::after {
+.menuItem > ul > li > ul::after {
     content: '';
     position: absolute;
     width: 0%;
     height: 3px;
     background: var(--primary);
     top: 0;
-    right: 0;
+    right: 8px;
     transition: .5s all linear;
     transition-delay: .1s; 
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
 }
 
-.menuItem > ul > li:hover ul>li::after{
-	width: 100%;
+.menuItem > ul > li:hover ul::after{
+	width: 91%;
 } 
+
+.menuItem>ul>li>ul>li{
+	position: relative;
+	padding: 5px;
+}
+
+
+
+.menuItem>ul>li>ul>li>ul{
+	position: absolute;
+	top: -5rem;
+	right:111%;
+	display: flex;
+	flex-direction: column;
+	background: var(--secound);
+	width: 10rem;
+	border-radius: 1rem;
+	padding: 0 .3rem .3rem .3rem;
+	align-items: center;
+	padding: .6rem 1rem;
+	margin-top:.2rem;
+	overflow: hidden;
+	transition: .3s all ease-in;
+	transform-origin: top;
+	/*transform: scaleY(0);*/
+	display: none;
+}
+
+.menuItem>ul>li>ul>li:hover ul {
+	display: block;
+}
